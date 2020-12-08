@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.nuNeric_std.all;
+use ieee.numeric_std.all;
 
 entity up_down_counter is
     generic(
@@ -15,7 +15,7 @@ end entity up_down_counter;
 
 architecture rtl of up_down_counter is
 
-    signal r_cnt : integer range 0 to (2**N -1) := 0
+    signal r_cnt : integer range 0 to (2**N -1) := 0;
 
 begin
     updown: process(clk, rst)
@@ -35,9 +35,10 @@ begin
                 else 
                     r_cnt <= r_cnt - 1;
                 end if;
+            end if;
         end if;
     end process updown;
     
-    o_count <= r_cnt;
+    o_count <= std_logic_vector(to_unsigned(r_cnt,o_count'length));
 
 end architecture rtl;

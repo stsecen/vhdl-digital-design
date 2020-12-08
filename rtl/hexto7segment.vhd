@@ -28,7 +28,7 @@ begin
                     "0111001" when "1100", --> c
                     "1011110" when "1101", --> d
                     "1111001" when "1110", --> e
-                    "1110001" when "1111"; --> f
+                    "1110001" when "1111", --> f
                     "0000000" when others;
 
 end architecture rtl;

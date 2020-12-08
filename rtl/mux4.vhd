@@ -26,8 +26,8 @@ architecture behavioral of mux4 is
     
 begin
 
-    o_data <= (i_sel(1) and i_sel(0) and i_data(3)) or (i_sel(1) and not(i_sel(0)) and i_data(2)) 
-            or (not(i_sel(1)) and i_sel(0) and i_data(1)) or (not(i_sel(1)) and not(i_sel(0)) and i_data(0));
+    o_data <= (i_sel(1) and i_sel(0) and i_data0(3)) or (i_sel(1) and not(i_sel(0)) and i_data0(2)) 
+            or (not(i_sel(1)) and i_sel(0) and i_data0(1)) or (not(i_sel(1)) and not(i_sel(0)) and i_data0(0));
 
 end architecture behavioral;
 
@@ -39,21 +39,21 @@ begin
 
     --> 4-1 mux with using three 2-1 muxes 
 
-    1st_mux: entity work.mux2(behavioral) 
+    first_mux: entity work.mux2(behavioral) 
             port map(
                 i_data0 => i_data0(0),
                 i_data1 => i_data0(1),
                 i_sel   => i_sel(0),
                 o_data  => s_0
     );
-    2nd_mux: entity work.mux2(behavioral) 
+    second_mux: entity work.mux2(behavioral) 
             port map(
                 i_data0 => i_data0(2),
                 i_data1 => i_data0(3),
                 i_sel   => i_sel(0),
                 o_data  => s_1
     );
-    3rd_mux: entity work.mux2(behavioral) 
+    third_mux: entity work.mux2(behavioral) 
             port map(
                 i_data0 => s_0,
                 i_data1 => s_1,
