@@ -22,7 +22,7 @@ fsm.vhd                     - Finite State Machine which created both Mealy and 
 fsm_counter.vhd             - N-bit Finite State Machine counter
 full_adder.vhd              - Full adder circuit with using half adders 
 half_adder.vhd              - Half adder circuit 
-hamming_distance.vhd        - Hamming distance find circuit 
+hamming_distance.vhd        - Hamming distance finder circuit 
 hexto7segment.vhd           - HEX to active high 7 segment display circuit 
 jk_flipflop.vhd             - J-K flip flop with asyncronous reset
 lfsr.vhd                    - Linear feedback shift register which provied 2-10 bit 
@@ -37,4 +37,14 @@ signal_generator.vhd        - Signal Generator circuit
 up_down_counter.vhd         - N-bit up/down counter
 vending_manchine.vhd        - Simple Vending Machine 
 wallace_tree4.vhd           - 4-bit Wallace Tree (Fast Multipication Algorthim)
+```
+## Testbenches 
+```
+tb_alu.vhd                  - Testbench for N-bit ALU with NVCZ flag
+tb_fsm_counter.vhd          - Testbench for N-bit Finite State Machine counter 
+tb_full_adder.vhd           - Testbench for Full adder circuit
+tb_hamming_distance.vhd     - Testbench for Hamming distance finder circuit 
+tb_priority_encoder.vhd     - Testbench for N-bit priority encoder circuit 
+tb_rgb2yuv.vhd              - Testbench for Combinational RGB-YUV converter circuit 
+tb_wallace_tree4.vhd        - Testbench for 4-bit Wallace Tree
 ```
